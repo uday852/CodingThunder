@@ -1,3 +1,4 @@
+#This is main file
 import flask_mail
 from flask import Flask, render_template, request, session, redirect
 
@@ -74,7 +75,8 @@ def home():
     else:
         prev = "/?page=" + str(page - 1)
         next = "/?page=" + str(page + 1)
-
+        
+#In this line we render the user to the main page of website
     return render_template('index.html', params=params, posts=posts, prev=prev, next=next)
 
 
